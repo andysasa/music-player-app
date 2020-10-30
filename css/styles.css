@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-font-stack: Quicksand, sans-serif;
+    --light-green: #33b75c;
+    --main-font-color: white;
+    --secondary-font-color: #aaa;
+    --light-white: #eee;
+    --light-black: #1a1a1a;
+    --container-width: 786px;
+}
+.app {
+    background: linear-gradient(to bottom, #7d182f, #100206);
+    height: 100%;
+}
+.player {
+    display: flex;
+    font-family: Quicksand;
+    height: 100vh;
+    line-height: 1.5;
+}
+@media only screen and (max-width: 768px) {
+    .player {
+        display: block;
+        height: 100%;
+    }
+}
+/* track bar */
+.track-bar {
+    background: var(--light-black);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.05s all ease;
+}
+.track-bar__fill {
+    height: 8px;
+    background: var(--light-green);
+    width: 0%;
+}
+/* player header */
+.player__header {
+    flex: 1;
+    padding: 1.4rem;
+}
+.player__image {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+}
+.player__details {
+    text-align: center;
+}
+.player__title {
+    color: var(--main-font-color);
+    margin-top: 1rem;
+}
+.player__counter {
+    color: var(--secondary-font-color);
+    font-size: 1.3rem; 
+    text-transform: uppercase;
+}
+.player__trigger {
+    text-transform: uppercase;
+    padding: 1.4rem 4.8rem;
+    background: var(--light-green);
+    border-radius: 4.2rem;
+    margin-top: 1.8rem;
+    border: none;
+    outline: none;
+    transition: 0.1s all ease;
+    letter-spacing: 1.5px;
+    color: var(--light-black);
+    opacity: 0.9;
+}
+.player__trigger:hover {
+    color: white;
+    transform: scale(1.1);
+    opacity: 1;
+}
+/* player body */
+.player__body {
+    flex: 2;
+    height: 100%;
+    padding: 0.6rem 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.playlist {
+    list-style: none;
+}
+.playlist__song {
+    display: flex;
+    padding: 0.8rem;
+    transition: 0.3s ease all;
+}
+.playlist__song:hover {
+    background: rgba(0,0,0,0.3);
+}
+.playlist__song--active {
+    color: var(--light-green);
+    background: rgba(0,0,0,0.3);
+}
+.playlist__song--active div {
+    color: inherit;
+}
+.playlist__play-pause {
+    color: var(--light-white);
+    margin-right: 1rem;
+}
+.playlist__song-title {
+    color: var(--main-font-color);
+}
+.playlist__song-artist {
+    color: var(--secondary-font-color);
+}
+.playlist__duration {
+    margin-left: auto;
+    color: var(--light-white);
+}
+
+
+
+
+
+
+
+
+
+
